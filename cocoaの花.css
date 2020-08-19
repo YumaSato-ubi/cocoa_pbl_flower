@@ -1,0 +1,88 @@
+.BackGround{
+  background-color: whitesmoke;
+  background-blend-mode: lighten;
+}
+
+.title > h1{
+  width: 180px;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Floor{
+  width: 120px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Floor2 > p#f2{
+  font-size: 20px;
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Per2 > p#p2{
+  font-size: 20px;
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flower2{
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flower2 img{
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button2{
+  width: 120px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pos2button > p#pos2{
+  width: 60px;
+  background-color: #ec8b8b;
+  box-shadow: 0px 3px red;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  border-radius: 50px;
+}
+
+.pos2button > p#pos2:active {
+  box-shadow: none;
+  position: relative;
+  top: 3px;
+}
+
+.neg2button > p#neg2{
+  width: 60px;
+  background-color: #1e90ff;
+  box-shadow: 0px 3px #000080;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+
+.neg2button > p#neg2:active {
+  box-shadow: none;
+  position: relative;
+  top: 3px;
+}

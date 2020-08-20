@@ -12,8 +12,8 @@ window.onload = function(){
   var sumnum = 0;
 
   $.getJSON("num.json", function(data){
-    num1 = data.value;
-    console.log(num1);
+    cocoa = data.cocoa;
+    all = data.all
   });
 
   function flower_change(per){
@@ -30,24 +30,31 @@ window.onload = function(){
     } 
   }
 
+  positive_count_2 = cocoa
+  all_count_2 = all
+  res = Math.floor((positive_count_2/all_count_2)*100)
+  per2.innerHTML = res + '%';
+  flower_change(res)
+
+
   // $.getJSON("num.json", function(data){
   //   console.log(data.value);
   // });
   
-  neg2button.addEventListener('click', () => {
-    negative_count_2++;
-    all_count_2++;
-    res = Math.floor((positive_count_2/all_count_2)*100)
-    per2.innerHTML = res + '%';
-    flower_change(res)
-  });
-  
-  pos2button.addEventListener('click', () => {
-    sumnum = sumnum + num1
-    positive_count_2++;
-    all_count_2++;
-    res = Math.floor((positive_count_2/all_count_2)*100)
-    per2.innerHTML = sumnum + '%';
-    flower_change(res)
-  });
+  // neg2button.addEventListener('click', () => {
+  //   negative_count_2++;
+  //   all_count_2++;
+  //   res = Math.floor((positive_count_2/all_count_2)*100)
+  //   per2.innerHTML = res + '%';
+  //   flower_change(res)
+  // });
+
+  // pos2button.addEventListener('click', () => {
+  //   sumnum = sumnum + num1
+  //   positive_count_2++;
+  //   all_count_2++;
+  //   res = Math.floor((positive_count_2/all_count_2)*100)
+  //   per2.innerHTML = sumnum + '%';
+  //   flower_change(res)
+  // });
 }

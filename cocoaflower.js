@@ -8,6 +8,13 @@ window.onload = function(){
   var neg2button = document.getElementById('neg2button');
   var pos2button = document.getElementById('pos2button');
   var img = document.getElementById('img');
+  var num1 = 0;
+  var sumnum = 0;
+
+  $.getJSON("num.json", function(data){
+    num1 = data.value;
+    console.log(num1);
+  });
 
   function flower_change(per){
     if (per < 20){
@@ -22,6 +29,10 @@ window.onload = function(){
       img.src = "flower4.png";
     } 
   }
+
+  // $.getJSON("num.json", function(data){
+  //   console.log(data.value);
+  // });
   
   neg2button.addEventListener('click', () => {
     negative_count_2++;
@@ -30,11 +41,13 @@ window.onload = function(){
     per2.innerHTML = res + '%';
     flower_change(res)
   });
+  
   pos2button.addEventListener('click', () => {
+    sumnum = sumnum + num1
     positive_count_2++;
     all_count_2++;
     res = Math.floor((positive_count_2/all_count_2)*100)
-    per2.innerHTML = res + '%';
+    per2.innerHTML = sumnum + '%';
     flower_change(res)
   });
 }

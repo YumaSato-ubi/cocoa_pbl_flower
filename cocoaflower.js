@@ -10,8 +10,9 @@ window.onload = function(){
   var img = document.getElementById('img');
   var num1 = 0;
   var sumnum = 0;
+  var ts = (new Date ()).getTime();
 
-  $.getJSON("num.json", function(data){
+  $.getJSON('num.json?t=' + String(ts), function(data){
     cocoa = data.cocoa;
     all = data.all;
     res = Math.floor((cocoa/all)*100);
@@ -53,4 +54,10 @@ window.onload = function(){
   //   per2.innerHTML = sumnum + '%';
   //   flower_change(res)
   // });
+  setTimeout(doReloadNoCache, 1000);
+}
+
+function doReloadNoCache() {
+  // キャッシュを無視してサーバーからリロード
+  window.location.reload(true);
 }

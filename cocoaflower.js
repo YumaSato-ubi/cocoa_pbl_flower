@@ -1,9 +1,6 @@
 window.onload = function(){
-  var res = 0;
   var percent = 0;
   var negative_count_2 = 0;
-  var cocoa = 1;
-  var all = 1;
   var per2 = document.getElementById('p2');
   var neg2button = document.getElementById('neg2button');
   var pos2button = document.getElementById('pos2button');
@@ -13,9 +10,9 @@ window.onload = function(){
   var ts = (new Date ()).getTime();
 
   $.getJSON('num.json?t=' + String(ts), function(data){
-    cocoa = data.cocoa;
-    all = data.all;
-    res = Math.floor((cocoa/all)*100);
+    var cocoa = data.cocoa;
+    var all = data.all;
+    var res = Math.floor((cocoa/all)*100);
     per2.innerHTML = res + '%';
     flower_change(res);
   });
@@ -54,7 +51,7 @@ window.onload = function(){
   //   per2.innerHTML = sumnum + '%';
   //   flower_change(res)
   // });
-  setTimeout(doReloadNoCache, 1000);
+  setTimeout(doReloadNoCache, 5000);
 }
 
 function doReloadNoCache() {

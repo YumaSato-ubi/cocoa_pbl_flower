@@ -2,8 +2,8 @@ window.onload = function(){
   var res = 0;
   var percent = 0;
   var negative_count_2 = 0;
-  var positive_count_2 = 0;
-  var all_count_2 = 0;
+  var cocoa = 1;
+  var all = 1;
   var per2 = document.getElementById('p2');
   var neg2button = document.getElementById('neg2button');
   var pos2button = document.getElementById('pos2button');
@@ -13,7 +13,10 @@ window.onload = function(){
 
   $.getJSON("num.json", function(data){
     cocoa = data.cocoa;
-    all = data.all
+    all = data.all;
+    res = Math.floor((cocoa/all)*100);
+    per2.innerHTML = res + '%';
+    flower_change(res);
   });
 
   function flower_change(per){
@@ -29,13 +32,6 @@ window.onload = function(){
       img.src = "flower4.png";
     } 
   }
-
-  positive_count_2 = cocoa
-  all_count_2 = all
-  res = Math.floor((positive_count_2/all_count_2)*100)
-  per2.innerHTML = res + '%';
-  flower_change(res)
-
 
   // $.getJSON("num.json", function(data){
   //   console.log(data.value);

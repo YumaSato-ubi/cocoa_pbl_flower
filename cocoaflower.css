@@ -1,13 +1,14 @@
-.BackGround{
-  background-color: whitesmoke;
-  background-blend-mode: lighten;
-}
+/* .BackGround{
+  background-image: url("kabe0.png");
+  background-size: cover;
+} */
 
 .title > h1{
   width: 180px;
   margin-top: auto;
   margin-left: auto;
   margin-right: auto;
+  font: italic small-caps bold 30px/2 cursive;
 }
 
 .Floor{
@@ -22,6 +23,7 @@
   width: 80px;
   margin-left: auto;
   margin-right: auto;
+  font: italic small-caps bold 20px/2 cursive;
 }
 
 .Per2 > p#p2{
@@ -29,16 +31,17 @@
   width: 80px;
   margin-left: auto;
   margin-right: auto;
+  font: italic small-caps bold 20px/2 cursive;
 }
 
 .flower2{
-  width: 500px;
+  width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .flower2 img{
-  width: 500px;
+  width: 900px;
   margin-left: auto;
   margin-right: auto;
 }

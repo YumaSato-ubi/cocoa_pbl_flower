@@ -19,15 +19,30 @@ window.onload = function(){
 
   function flower_change(per){
     if (per < 20){
-      img.src = "flower0.png";
+      img.src = "osamu0.png";
+      document.body.style.backgroundSize = 'cover'; 
+      document.body.background = 'kabe0.png';
     } else if (20 <= per && per < 40){
-      img.src = "flower1.png";
+      img.src = "osamu1.png";
+      document.body.style.backgroundSize = 'cover'; 
+      document.body.background = 'kabe1.png';
+      document.body.style.backgroundPosition = "55% 30%";
     } else if (40 <= per && per < 60){
-      img.src = "flower2.png";
+      img.src = "osamu2.png";
+      document.body.style.backgroundSize = 'cover'; 
+      document.body.background = 'kabe2.png';
+      document.body.style.backgroundPosition = "bottom center";
+    
     } else if (60 <= per && per < 80){
-      img.src = "flower3.png";
+      img.src = "osamu3.png";
+      document.body.style.backgroundSize = 'cover'; 
+      document.body.background = 'kabe3.png';
     } else if (80 <= per && per <= 100){
-      img.src = "flower4.png";
+      img.src = "osamu4.png";
+      document.body.style.backgroundSize = 'auto'; 
+      document.body.background = 'kabe4.png';
+      document.body.style.backgroundPosition = "55% 30%";
+    
     } 
   }
 

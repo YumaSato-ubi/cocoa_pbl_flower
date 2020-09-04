@@ -43,7 +43,7 @@ while True:
     print(addr_data)
     
     value = {"cocoa":len(addr_data), "all":len(manu_data)}
-    with open("cocoa_pbl_flower/cocoa_pbl_flower/num.json","w") as f:
+    with open("num.json","w") as f:
                 k = json.dumps(value)
                 f.write(k)
     '''
